@@ -5,13 +5,13 @@ posts = [
     {
         'author':'John Doe',
         'title': 'Post One',
-        'content': 'These niggas actin sus',
+        'content': 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Et ipsa ex itaque? Explicabo adipisci amet corrupti, nobis, ipsa, nam minus tempore aspernatur alias neque earum laboriosam consequuntur excepturi nisi expedita!',
         'date_posted': 'May 7, 2021'
     },
     {
         'author':'Jane Doe',
         'title': 'Post Two',
-        'content': 'Who tf is John tho(doe)?',
+        'content': 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Et ipsa ex itaque? Explicabo adipisci amet corrupti, nobis, ipsa, nam minus tempore aspernatur alias neque earum laboriosam consequuntur excepturi nisi expedita!',
         'date_posted': 'May 8, 2021'
     }
 ]
