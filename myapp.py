@@ -1,12 +1,10 @@
-from crypt import methods
-from flask import Flask, render_template
-
+from flask import Flask, render_template, url_for, flash, redirect
 from forms import RegistrationForm, LoginForm
 
 app = Flask(__name__)
-
 app.config['SECRET_KEY'] = 'c968502a61da53471f4fd0fcb148cada'
 
+# Garbage Data
 posts = [
     {
         'author':'John Doe',
@@ -40,20 +38,31 @@ posts = [
     }
 ]
 
+
+# Home Page
 @app.route("/")
-def hello_world():
+def home():
     return render_template('home.html', posts=posts, title="Home")
 
+
+# About Page
 @app.route("/about")
 def about():
     return render_template('about.html', title="About")    
 
-@app.route("/registration")
+
+# Registration Page
+@app.route("/registration", methods=['GET', 'POST'])
 def register():
     form = RegistrationForm()
-    return render_template('register.html', title="Registration", form=form, methods=['GET', 'POST'])
+    if form.validate_on_submit():
+        flash(f'Account successfully created for { form.username.data }', 'success')
+        return redirect(url_for('home'))
+    return render_template('register.html', title="Registration", form=form)
 
-@app.route("/login")
+
+# Login Page
+@app.route("/login", methods=['GET', 'POST'])
 def login():
     form = LoginForm()
     return render_template('login.html', title="Login", form=form, methods=['GET', 'POST'])
