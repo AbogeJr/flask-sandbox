@@ -65,6 +65,12 @@ def register():
 @app.route("/login", methods=['GET', 'POST'])
 def login():
     form = LoginForm()
+    if form.validate_on_submit():
+        if form.email.data == 'admin@aboge.com' and form.password.data == 'admin':
+            flash(f'Admin logged in successfully! Welcome Boss.', 'success')
+            return redirect(url_for('home'))
+        else:
+             flash(f'Access Denied! Please check credentials.', 'danger')   
     return render_template('login.html', title="Login", form=form, methods=['GET', 'POST'])
 
 
