@@ -4,7 +4,7 @@ from forms import RegistrationForm, LoginForm
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'c968502a61da53471f4fd0fcb148cada'
 
-# Garbage Data
+# Dummy Data
 posts = [
     {
         'author':'John Doe',
