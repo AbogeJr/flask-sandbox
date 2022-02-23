@@ -33,41 +33,6 @@ class Post(db.Model):
         return f"User('{self.title}', '{self.content}', '{self.date_posted}')"
     
 
-# # Dummy Data
-# posts = [
-#     {
-#         'author':'John Doe',
-#         'title': 'Post One',
-#         'content': 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Et ipsa ex itaque? Explicabo adipisci amet corrupti, nobis, ipsa, nam minus tempore aspernatur alias neque earum laboriosam consequuntur excepturi nisi expedita!',
-#         'date_posted': 'May 7, 2021'
-#     },
-#     {
-#         'author':'Jane Doe',
-#         'title': 'Post Two',
-#         'content': 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Et ipsa ex itaque? Explicabo adipisci amet corrupti, nobis, ipsa, nam minus tempore aspernatur alias neque earum laboriosam consequuntur excepturi nisi expedita!',
-#         'date_posted': 'May 8, 2021'
-#     },
-#     {
-#         'author':'Jim Halpert',
-#         'title': 'Post Three',
-#         'content': 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Et ipsa ex itaque? Explicabo adipisci amet corrupti, nobis, ipsa, nam minus tempore aspernatur alias neque earum laboriosam consequuntur excepturi nisi expedita!',
-#         'date_posted': 'May 8, 2021'
-#     },
-#     {
-#         'author':'Pam Beasley',
-#         'title': 'Post Four',
-#         'content': 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Et ipsa ex itaque? Explicabo adipisci amet corrupti, nobis, ipsa, nam minus tempore aspernatur alias neque earum laboriosam consequuntur excepturi nisi expedita!',
-#         'date_posted': 'May 8, 2021'
-#     },
-#     {
-#         'author':'Michael Scott',
-#         'title': 'Post Five',
-#         'content': 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Et ipsa ex itaque? Explicabo adipisci amet corrupti, nobis, ipsa, nam minus tempore aspernatur alias neque earum laboriosam consequuntur excepturi nisi expedita!',
-#         'date_posted': 'May 8, 2021'
-#     }
-# ]
-
-
 # Home Page
 @app.route("/")
 def home():
